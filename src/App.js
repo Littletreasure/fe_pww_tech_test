@@ -1,14 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Header from "./Components/Header";
+import Products from "./Components/Products"
 
-function App() {
+class App extends Component {
+  render() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>Test</p>
-      </header>
+      <Header />
+      <Products />
     </div>
   );
+}
 }
 
 export default App;
