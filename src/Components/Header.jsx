@@ -1,10 +1,11 @@
 import React from "react";
-//import "../styles/Header.css";
+import "../css/styles.css";
 
 function Header() {
   return (
     <header className="header">
-      <h1>PWW Tech Test</h1>
+      <p>Ruth Sargent</p>
+      <p>PWW Tech Test</p>
     </header>
   );
 }

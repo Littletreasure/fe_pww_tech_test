@@ -16,17 +16,25 @@ isLoading: true
   render() {
     const {products, isLoading} = this.state;
     return (
-<div>
-  <p>Products</p>
+<div className="products">
+  <h1>Product List</h1>
   {isLoading ? (
           <p className="loading">Loading ...</p>
         ) : (
-          <div className="products">
+          <div className="productsContainer">
             {products.map((product) => {
               return (
-                <div className="product" key={product.key}>
-                  
-                    <p>{product.name}</p>
+                <div className="productTile" key={product.key}>
+                    <h2>{product.name}</h2>
+                    <p>Description: {product.description}</p>
+                    <p>Price: {product.price['value']} {product.price['currency']}</p>
+                    <p>Type: {product.type}</p>
+                    <p>Department: {product.department}</p>
+                    <div className="row">
+                    <p>ID: {product.id}</p>
+                    <p>Weight: {product.weight}</p>
+                    </div>
+                    
                 </div>
               );
             })}
