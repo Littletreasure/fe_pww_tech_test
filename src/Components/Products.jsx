@@ -29,7 +29,7 @@ class Products extends Component {
   }
 
   handleChange = (event) => {
-    console.log(event);
+    
     const { value, id, name } = event.target;
     if (id === "sortBy") {
       this.setState({ sort_by: value });
@@ -43,7 +43,7 @@ class Products extends Component {
     return (
 <div className="products">
   <h1>Product List</h1>
-  <Sort handleChange={this.handleChange} />
+  <Sort handleChange={this.handleChange} handleTypeChange={this.props.handleTypeChange} />
   {isLoading ? (
           <p className="loading">Loading ...</p>
         ) : (

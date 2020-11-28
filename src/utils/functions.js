@@ -1,3 +1,5 @@
+import _ from 'lodash'
+
 function dynamicSort(property, order) {
   let sortOrder = 1;
   if (order === "desc") {
@@ -19,10 +21,14 @@ function dynamicSort(property, order) {
     }
   };
 }
-const sortBy = (sort_by, order, products) => {
+
+export const sortBy = (sort_by, order, products) => {
   return products.sort(dynamicSort(sort_by, order));
 };
 
-module.exports = {
-  sortBy
-};
+export const groupBy = (array) => {
+  const sortArray = sortBy('type', 'asc', array);
+  const groupedArray=_.groupBy(sortArray,'type');
+  
+  return groupedArray;
+}

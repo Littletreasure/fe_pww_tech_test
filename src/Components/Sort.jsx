@@ -35,7 +35,10 @@ function Sort(props) {
           desc
         </label>
       </div>
+      <div className="typeChange">
+        <p>Group by Type</p><button onClick={props.handleTypeChange}>Click</button>
       </div>
+    </div>
   )}
 
   export default Sort;
