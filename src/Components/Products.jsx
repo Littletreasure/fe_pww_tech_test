@@ -1,23 +1,49 @@
 import React, { Component } from "react";
+import Sort from "./Sort";
+import "../css/styles.css";
 import * as api from "../utils/api";
+const { sortBy } = require("../utils/functions");
 
 class Products extends Component {
   state = {
-products: [],
-isLoading: true
+    products: [],
+    isLoading: true,
+    sort_by: "",
+    order: ""
   }
 
   componentDidMount() {
     api.getProducts().then(products => {
-      console.log(products);
       this.setState({products, isLoading: false})
     })
   }
+
+  componentDidUpdate(prevProps, prevState) {
+    const { sort_by, order, products } = this.state;
+    const changesort = prevState.sort_by !== sort_by;
+    const changeorder = prevState.order !== order;
+    
+    if (changesort || changeorder) {
+      this.setState({ products: sortBy(sort_by, order, products) });
+    } 
+  }
+
+  handleChange = (event) => {
+    console.log(event);
+    const { value, id, name } = event.target;
+    if (id === "sortBy") {
+      this.setState({ sort_by: value });
+    } else if (name === "order") {
+      this.setState({ order: value });
+    } 
+  };
+
   render() {
     const {products, isLoading} = this.state;
     return (
 <div className="products">
   <h1>Product List</h1>
+  <Sort handleChange={this.handleChange} />
   {isLoading ? (
           <p className="loading">Loading ...</p>
         ) : (
