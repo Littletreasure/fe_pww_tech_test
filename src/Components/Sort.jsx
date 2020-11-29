@@ -2,7 +2,7 @@ import React from "react";
 import "../css/styles.css";
 
 function Sort(props) {
-  console.log(props)
+  
   return (
     <div className="productSort">
       <div>
@@ -23,6 +23,7 @@ function Sort(props) {
             name="order"
             value="asc"
             onChange={props.handleChange}
+            
           />
           asc
         </label>
@@ -40,9 +41,21 @@ function Sort(props) {
       {!props.group ? 
       (
         <div className="groupChange">
-        <p>Group by Type</p><button onClick={props.handleGroupChange}>Click</button>
+        <label>
+          Group by:
+          <select name="groupBy" id="groupBy" onChange={props.handleGroupChange}>
+            <option value=""></option>
+            <option value="type">Type</option>
+            <option value="department">Department</option>
+          </select>
+        </label>
+        {/* <p>Group by Type</p><button onClick={props.handleGroupChange}>Click</button> */}
       </div>
-      ) : <p>nowt</p> }
+      ) : (
+        <div className="groupChange">
+        <button onClick={props.handleBackClick}>Back</button>
+      </div>
+      ) }
       </div>
     </div>
   )}

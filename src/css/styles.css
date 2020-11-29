@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Righteous&display=swap");
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12,14 +13,20 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 10px;
+  padding: 0 10px;
   position: fixed;
   top: 0;
   width: 100%;
   left: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #a9a9eb;
+  background: #8383e2;
+}
+
+.header p {
+  font-family: "Indie Flower", cursive;
+  font-size: 30px;
+  margin: 10px;
 }
 
 .products {
@@ -67,8 +74,12 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
-  border: 1px solid black;
+  border: 1px solid #8383e2;
+  border-radius: 10px;
   padding: 20px;
+  background: #eaeafa;
+  -webkit-box-shadow: 5px 5px 8px #808080;
+  box-shadow: 5px 5px 8px #808080;
 }
 
 .productsContainer .productTile h2 {
@@ -100,7 +111,7 @@
 }
 
 .productSort {
-  padding: 10px;
+  padding: 10px 15px 20px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -134,10 +145,16 @@
   padding-right: 5px;
 }
 
+.productSort button {
+  cursor: pointer;
+}
+
 .App .keyTitle {
-  background: pink;
+  background: #eaeafa;
   width: 100%;
   text-align: center;
+  padding: 10px 0;
+  font-family: "Righteous", cursive;
 }
 
 .App .margin {
@@ -157,5 +174,17 @@
 
 .App .productGroup {
   width: 100%;
+  margin-bottom: 15px;
+}
+
+.App h1 {
+  font-family: "Righteous", cursive;
+}
+
+.loading {
+  margin-top: 100px;
+  font-size: 30px;
+  color: red;
+  text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */

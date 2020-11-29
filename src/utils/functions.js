@@ -26,9 +26,9 @@ export const sortBy = (sort_by, order, products) => {
   return products.sort(dynamicSort(sort_by, order));
 };
 
-export const groupBy = (array) => {
-  const sortArray = sortBy('type', 'asc', array);
-  const groupedArray=_.groupBy(sortArray,'type');
+export const groupBy = (group, array) => {
+  const sortArray = sortBy(group, 'asc', array);
+  const groupedArray=_.groupBy(sortArray, group);
   
   return groupedArray;
 }

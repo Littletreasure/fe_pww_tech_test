@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Sort from "./Sort";
 import "../css/styles.css";
-import * as api from "../utils/api";
 const { sortBy } = require("../utils/functions");
 
 class Products extends Component {
@@ -42,7 +41,7 @@ class Products extends Component {
     const {products, isLoading} = this.state;
     return (
 <div className="products">
-  <Sort handleChange={this.handleChange} handleGroupChange={this.props.handleGroupChange} group={this.props.group} />
+  <Sort handleChange={this.handleChange} handleGroupChange={this.props.handleGroupChange} handleBackClick={this.props.handleBackClick} group={this.props.group} />
   {isLoading ? (
           <p className="loading">Loading ...</p>
         ) : (
