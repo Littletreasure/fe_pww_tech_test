@@ -13,9 +13,9 @@ class Products extends Component {
   }
 
   componentDidMount() {
-    api.getProducts().then(products => {
-      this.setState({products, isLoading: false})
-    })
+   console.log("products mounted")
+      this.setState({products: this.props.products, isLoading: false})
+    
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -42,8 +42,7 @@ class Products extends Component {
     const {products, isLoading} = this.state;
     return (
 <div className="products">
-  <h1>Product List</h1>
-  <Sort handleChange={this.handleChange} handleTypeChange={this.props.handleTypeChange} />
+  <Sort handleChange={this.handleChange} handleGroupChange={this.props.handleGroupChange} group={this.props.group} />
   {isLoading ? (
           <p className="loading">Loading ...</p>
         ) : (

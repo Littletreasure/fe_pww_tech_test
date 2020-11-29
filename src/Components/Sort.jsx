@@ -2,6 +2,7 @@ import React from "react";
 import "../css/styles.css";
 
 function Sort(props) {
+  console.log(props)
   return (
     <div className="productSort">
       <div>
@@ -35,8 +36,13 @@ function Sort(props) {
           desc
         </label>
       </div>
-      <div className="typeChange">
-        <p>Group by Type</p><button onClick={props.handleTypeChange}>Click</button>
+      <div>
+      {!props.group ? 
+      (
+        <div className="groupChange">
+        <p>Group by Type</p><button onClick={props.handleGroupChange}>Click</button>
+      </div>
+      ) : <p>nowt</p> }
       </div>
     </div>
   )}
