@@ -51,7 +51,7 @@ class Products extends Component {
                 <div className="productTile" key={product.key}>
                     <h2>{product.name}</h2>
                     <p>Description: {product.description}</p>
-                    <p>Price: {product.price['value']} {product.price['currency']}</p>
+                    <p>Price: {product.price['value'].toFixed(2)} {product.price['currency']}</p>
                     <p>Type: {product.type}</p>
                     <p>Department: {product.department}</p>
                     <div className="row">

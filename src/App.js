@@ -3,7 +3,7 @@ import Header from "./Components/Header";
 import Products from "./Components/Products"
 import "./css/styles.css";
 import * as api from "./utils/api";
-const { groupBy } = require("./utils/functions");
+const { groupBy} = require("./utils/functions");
 
 class App extends Component {
 
