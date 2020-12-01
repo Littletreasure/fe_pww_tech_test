@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Righteous&display=swap");
 
-$main-colour: #2eb8b8;
+$main-colour: #0f3e3e;
 $secondary-colour: #c2f0f0;
 
 @mixin flex-row() {
@@ -30,6 +30,7 @@ $secondary-colour: #c2f0f0;
     font-family: "Indie Flower", cursive;
     font-size: 30px;
     margin: 10px;
+    color: white;
     @media (max-width: 650px) {
       font-size: 25px;
       margin: 5px;
@@ -62,19 +63,19 @@ $secondary-colour: #c2f0f0;
 
   .productTile {
     @include flex-column();
-    justify-self: center;
+    justify-content: space-between;
     box-sizing: border-box;
     width: 100%;
-    border: 1px solid $main-colour;
     border-radius: 10px;
     padding: 20px;
     background: $secondary-colour;
-    -moz-box-shadow: 5px 5px 8px #808080;
-    -webkit-box-shadow: 5px 5px 8px #808080;
-    box-shadow: 5px 5px 8px #808080;
+    -moz-box-shadow: 5px 5px 8px #7f8080;
+    -webkit-box-shadow: 5px 5px 8px #7f8080;
+    box-shadow: 5px 5px 8px #6d7878;
     h2 {
       font-size: 20px;
       margin: 0 0 20px 0;
+      color: $main-colour;
       @media (max-width: 650px) {
         font-size: 15px;
         margin: 0 0 10px 0;
@@ -84,6 +85,7 @@ $secondary-colour: #c2f0f0;
       text-align: justify;
       font-size: 15px;
       margin: 5px 0;
+      color: $main-colour;
       @media (max-width: 650px) {
         font-size: 12px;
       }
@@ -144,6 +146,7 @@ $secondary-colour: #c2f0f0;
   }
   h1 {
     font-family: "Righteous", cursive;
+    color: $main-colour;
     @media (max-width: 650px) {
       font-size: 25px;
     }
