@@ -49,7 +49,7 @@ function Sort(props) {
             <option value="department">Department</option>
           </select>
         </label>
-        {/* <p>Group by Type</p><button onClick={props.handleGroupChange}>Click</button> */}
+        
       </div>
       ) : (
         <div className="groupChange">
