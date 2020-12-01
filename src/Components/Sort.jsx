@@ -5,7 +5,7 @@ function Sort(props) {
   
   return (
     <div className="productSort">
-      <div>
+      <div className="sort">
         <label>
           Sort by:
           <select name="sortBy" id="sortBy" onChange={props.handleChange}>

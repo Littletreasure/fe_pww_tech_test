@@ -20,13 +20,35 @@
   left: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #8383e2;
+  background: #2eb8b8;
 }
 
 .header p {
   font-family: "Indie Flower", cursive;
   font-size: 30px;
   margin: 10px;
+}
+
+@media (max-width: 650px) {
+  .header p {
+    font-size: 25px;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 650px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .products {
@@ -48,8 +70,8 @@
   width: 90%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (350px)[auto-fit];
-      grid-template-columns: repeat(auto-fit, 350px);
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   -webkit-column-gap: 40px;
@@ -57,6 +79,16 @@
   row-gap: 40px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+@media (max-width: 650px) {
+  .productsContainer {
+    -ms-grid-columns: (minmax(220px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    row-gap: 20px;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+  }
 }
 
 .productsContainer .productTile {
@@ -74,10 +106,10 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
-  border: 1px solid #8383e2;
+  border: 1px solid #2eb8b8;
   border-radius: 10px;
   padding: 20px;
-  background: #eaeafa;
+  background: #c2f0f0;
   -webkit-box-shadow: 5px 5px 8px #808080;
   box-shadow: 5px 5px 8px #808080;
 }
@@ -87,10 +119,23 @@
   margin: 0 0 20px 0;
 }
 
+@media (max-width: 650px) {
+  .productsContainer .productTile h2 {
+    font-size: 15px;
+    margin: 0 0 10px 0;
+  }
+}
+
 .productsContainer .productTile p {
   text-align: justify;
   font-size: 15px;
   margin: 5px 0;
+}
+
+@media (max-width: 650px) {
+  .productsContainer .productTile p {
+    font-size: 12px;
+  }
 }
 
 .productsContainer .productTile .row {
@@ -141,16 +186,40 @@
           align-items: center;
 }
 
-.productSort .groupChange p {
-  padding-right: 5px;
+@media (max-width: 650px) {
+  .productSort .groupChange {
+    font-size: 15px;
+  }
 }
 
 .productSort button {
   cursor: pointer;
 }
 
+@media (max-width: 650px) {
+  .productSort {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .productSort .sort {
+    padding-bottom: 5px;
+    font-size: 15px;
+  }
+}
+
 .App .keyTitle {
-  background: #eaeafa;
+  background: #c2f0f0;
   width: 100%;
   text-align: center;
   padding: 10px 0;
@@ -172,6 +241,12 @@
   margin: 60px 0;
 }
 
+@media (max-width: 650px) {
+  .App .margin {
+    margin: 85px 0 40px 0;
+  }
+}
+
 .App .productGroup {
   width: 100%;
   margin-bottom: 15px;
@@ -179,6 +254,12 @@
 
 .App h1 {
   font-family: "Righteous", cursive;
+}
+
+@media (max-width: 650px) {
+  .App h1 {
+    font-size: 25px;
+  }
 }
 
 .loading {

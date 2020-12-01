@@ -124,7 +124,7 @@ describe('groupBy', () => {
     "department": "Computing",
     "weight": "30g"
   }];
-  const actual = groupBy(products);
+  const actual = groupBy("type", products);
   const expected = {
         Electrical: [
           {
